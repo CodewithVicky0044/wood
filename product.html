@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Wood Art - Handcrafted Wooden Sculptures</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <header class="wc-header">
+    <h1 class="wc-logo">Wood Carvings</h1>
+  </header>
+
+  <nav class="wc-nav">
+    <a href="index.html">Home</a>
+  </nav>
+
+  <div class="wc-product-container">
+    <!-- Product 1 -->
+    <div class="wc-product-card">
+      <img src="assets/ChatGPT Image Apr 13, 2025, 11_45_15 AM.png" alt="Elephant Carving" class="wc-product-img">
+      <div class="wc-product-details">
+        <h2 class="wc-product-title">Artistic Elephant Carving</h2>
+        <p class="wc-product-desc">Handcrafted elephant carving from pure sheesham wood, traditional design.</p>
+        <p class="wc-product-price">₹1,499</p>
+        <button class="wc-cart-btn">Add to Cart</button>
+        <button class="wc-buy-btn">Buy Now</button>
+      </div>
+    </div>
+
+    <!-- Product 2 -->
+    <div class="wc-product-card">
+      <img src="assets/ChatGPT Image Apr 13, 2025, 02_15_09 PM.png" alt="Buddha Statue" class="wc-product-img">
+      <div class="wc-product-details">
+        <h2 class="wc-product-title">Meditating Buddha</h2>
+        <p class="wc-product-desc">Serene Buddha statue made from teak wood, 12 inches height.</p>
+        <p class="wc-product-price">₹2,199</p>
+        <button class="wc-cart-btn">Add to Cart</button>
+        <button class="wc-buy-btn">Buy Now</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Checkout Form -->
+  <div class="wc-checkout-form" id="checkoutForm" style="display:none;">
+    <div class="wc-form-container">
+      <h3>Order Details</h3>
+      <form id="orderForm">
+        <input type="hidden" name="product" id="productName" />
+
+        <div class="wc-form-group">
+          <label>Your Name:</label>
+          <input type="text" name="name" required />
+        </div>
+
+        <div class="wc-form-group">
+          <label>Email:</label>
+          <input type="email" name="email" required />
+        </div>
+
+        <div class="wc-form-group">
+          <label>Address:</label>
+          <textarea name="address" required></textarea>
+        </div>
+
+        <div class="wc-form-group">
+          <label>Quantity:</label>
+          <input type="number" name="quantity" min="1" value="1" required />
+        </div>
+
+        <button type="submit" class="wc-submit-btn">Place Order</button>
+      </form>
+    </div>
+  </div>
+
+  <footer class="wc-footer">
+    <p>© 2024 Wood Art. All rights reserved.</p>
+  </footer>
+
+  <script src="scripct.js"></script>
+</body>
+</html>

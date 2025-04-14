@@ -1,0 +1,478 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f5e6d3;
+}
+
+/* Navigation */
+nav {
+    background-color: #3d2b1c;
+    padding: 1rem 5%;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #f5e6d3;
+    font-size: 2rem;
+    font-family: 'Times New Roman', serif;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: #f5e6d3;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.menu-toggle {
+    display: none;
+    color: #f5e6d3;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Hero Section */
+/* .hero {
+    height: 100vh;
+    background: linear-gradient(rgba(61, 43, 28, 0.7), rgba(61, 43, 28, 0.7)),
+                url('/assets/ChatGPT\ Image\ Apr\ 13\,\ 2025\,\ 11_45_15\ AM.png') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #f5e6d3;
+    padding-top: 80px;
+} */
+.hero {
+    height: 100vh;
+    /* Navigation की height compensate करने के लिए */
+    margin-top: 80px; 
+    background: linear-gradient(rgba(61, 43, 28, 0.5), rgba(61, 43, 28, 0.5)), /* Opacity कम किया */
+                url('/assets/ChatGPT\ Image\ Apr\ 13\,\ 2025\,\ 11_45_15\ AM.png') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #f5e6d3;
+    /* नए properties add किए */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    padding: 0;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-family: 'Times New Roman', serif;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.cta-btn {
+    padding: 1rem 2rem;
+    background-color: #8b5e3c;
+    color: #f5e6d3;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cta-btn:hover {
+    background-color: #6d4a30;
+}
+
+/* Featured Products */
+.featured {
+    padding: 5rem 5%;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #3d2b1c;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.product-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+    height: fit-content;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+}
+
+.product-img {
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+}
+
+.product-info {
+    padding: 1.5rem;
+}
+
+.product-title {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #3d2b1c;
+}
+
+.product-price {
+    color: #8b5e3c;
+    font-weight: bold;
+}
+
+/* About Section */
+.about {
+    padding: 5rem 5%;
+    background-color: #e4d5c3;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.about-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #3d2b1c;
+}
+
+.about-img {
+    height: 400px;
+    background: url('assets/ChatGPT\ Image\ Apr\ 13\,\ 2025\,\ 11_45_15\ AM.png') center/cover;
+    border-radius: 10px;
+}
+
+/* Contact Section */
+.contact {
+    padding: 5rem 5%;
+    background-color: #3d2b1c;
+    color: #f5e6d3;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid #8b5e3c;
+    border-radius: 5px;
+    background-color: #f5e6d3;
+}
+
+/* Footer */
+footer {
+    background-color: #2a1e13;
+    color: #f5e6d3;
+    padding: 2rem 5%;
+    text-align: center;
+}
+
+.social-links {
+    margin-bottom: 1rem;
+}
+
+.social-links a {
+    color: #f5e6d3;
+    margin: 0 1rem;
+    font-size: 1.5rem;
+}
+
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #3d2b1c;
+        padding: 1rem;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ============== CSS Variables ============== */
+:root {
+    --wc-primary-dark: #4a2c2a;
+    --wc-secondary-dark: #6b4d4a;
+    --wc-cream-bg: #f5e6d3;
+    --wc-text-light: #f5e6d3;
+    --wc-transition: all 0.3s ease;
+}
+
+/* ============== Base Styles ============== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--wc-cream-bg);
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+
+/* ============== Header Styles ============== */
+.wc-header {
+    background: linear-gradient(rgba(74, 44, 42, 0.9), rgba(74, 44, 42, 0.9)),
+      url('wood-texture.jpg') center/cover;
+    padding: 2rem 1rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.wc-logo {
+    color: var(--wc-text-light);
+    font-family: 'Georgia', serif;
+    font-size: 3rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* ============== Navigation Styles ============== */
+.wc-nav {
+    background-color: var(--wc-secondary-dark);
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.wc-nav a {
+    color: var(--wc-text-light);
+    text-decoration: none;
+    margin: 0 1.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: var(--wc-transition);
+    font-weight: 500;
+}
+
+.wc-nav a:hover {
+    background-color: var(--wc-primary-dark);
+    transform: translateY(-2px);
+}
+
+/* ============== Product Section Styles ============== */
+.wc-product-container {
+    max-width: 1400px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+}
+
+.wc-product-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: var(--wc-transition);
+    position: relative;
+}
+
+.wc-product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.wc-product-img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-bottom: 3px solid var(--wc-primary-dark);
+}
+
+.wc-product-details {
+    padding: 1.5rem;
+}
+
+.wc-product-title {
+    color: var(--wc-primary-dark);
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+    font-weight: 700;
+}
+
+.wc-product-desc {
+    color: #666;
+    font-size: 0.95rem;
+    margin-bottom: 1.25rem;
+    min-height: 80px;
+}
+
+.wc-product-price {
+    color: var(--wc-primary-dark);
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.wc-cart-btn {
+    background-color: var(--wc-secondary-dark);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1.1rem;
+    transition: var(--wc-transition);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.wc-cart-btn:hover {
+    background-color: var(--wc-primary-dark);
+    transform: scale(1.02);
+}
+
+/* ============== Footer Styles ============== */
+.wc-footer {
+    background-color: var(--wc-primary-dark);
+    color: var(--wc-text-light);
+    padding: 2.5rem 1rem;
+    margin-top: 4rem;
+    border-top: 3px solid var(--wc-secondary-dark);
+}
+
+.wc-footer p {
+    max-width: 1200px;
+    margin: 0 auto;
+    font-size: 0.9rem;
+}
+
+/* ============== Responsive Design ============== */
+@media (max-width: 992px) {
+    .wc-logo {
+        font-size: 2.5rem;
+    }
+    
+    .wc-product-container {
+        gap: 2rem;
+        padding: 0 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .wc-product-container {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+    }
+
+    .wc-nav a {
+        display: inline-block;
+        margin: 0.5rem;
+        padding: 0.5rem;
+    }
+
+    .wc-product-img {
+        height: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .wc-logo {
+        font-size: 2rem;
+    }
+
+    .wc-nav a {
+        display: block;
+        margin: 0.5rem 0;
+    }
+
+    .wc-product-details {
+        padding: 1rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
